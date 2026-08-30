@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Murugan Lodge - Tiruvannamalai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1b1c1c;
+            background: linear-gradient(90deg, #fbf9f8 0%, #fafaf8 100%);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            backdrop-filter: blur(6px);
+            background: rgba(251, 249, 248, 0.9);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 0 40px;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 0 64px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #944a00;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            color: #564337;
+            transition: color 0.3s;
+            padding-bottom: 8px;
+        }
+
+        .nav a:first-child {
+            color: #944a00;
+            border-bottom: 2px solid #944a00;
+        }
+
+        .nav a:hover {
+            color: #944a00;
+        }
+
+        .btn-book {
+            background: #944a00;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-book:hover {
+            background: #7a3a00;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            margin-top: 80px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: 640px;
+            background: linear-gradient(135deg, rgba(27, 28, 28, 0.5) 0%, rgba(27, 28, 28, 0.5) 100%), url('https://www.figma.com/api/mcp/asset/57728ac2-8d9e-4726-bbf1-69e5746c7f60.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            min-height: 600px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 64px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -0.96px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e4e2e1;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            background: #944a00;
+            color: white;
+            padding: 12px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-primary:hover {
+            background: #7a3a00;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #e4e2e1;
+            padding: 12px 49px;
+            border: 1px solid #e4e2e1;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(251, 249, 248, 0.1);
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(251, 249, 248, 0.2);
+            padding: 5px 25px;
+            border-radius: 9999px;
+            font-size: 12px;
+            color: #e4e2e1;
+        }
+
+        .badge-icon {
+            width: 12px;
+            height: 8px;
+        }
+
+        /* ===== ROOMS SECTION ===== */
+        .section {
+            padding: 80px 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #944a00;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .section-heading p {
+            font-size: 16px;
+            color: #564337;
+            margin-top: 12px;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .room-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 12px 24px rgba(51, 51, 51, 0.12);
+        }
+
+        .room-image {
+            height: 256px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .room-badge {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            color: #944a00;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .room-content {
+            padding: 32px;
+        }
+
+        .room-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1b1c1c;
+            line-height: 1.4;
+        }
+
+        .room-content p {
+            font-size: 16px;
+            color: #564337;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .btn-enquire {
+            width: 100%;
+            background: transparent;
+            color: #944a00;
+            padding: 13px 25px;
+            border: 1px solid #897365;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-enquire:hover {
+            background: #944a00;
+            color: white;
+            border-color: #944a00;
+        }
+
+        .rooms-summary {
+            text-align: center;
+            background: #e9e2d3;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            display: inline-block;
+            margin: 0 auto;
+            font-size: 14px;
+            color: #696458;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+        }
+
+        /* ===== BOOKING CTA SECTION ===== */
+        .booking-cta {
+            background: #e67e22;
+            padding: 80px 240px;
+            text-align: center;
+            color: #502600;
+        }
+
+        .booking-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            line-height: 1.3;
+        }
+
+        .booking-cta p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: rgba(80, 38, 0, 0.8);
+        }
+
+        .booking-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 25px;
+        }
+
+        .btn-call, .btn-whatsapp {
+            height: 48px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-call {
+            background: white;
+            color: #944a00;
+            width: 197px;
+        }
+
+        .btn-call:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            width: 232px;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fa856;
+            transform: translateY(-2px);
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 48px;
+        }
+
+        .gallery-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #944a00;
+        }
+
+        .gallery-header p {
+            color: #564337;
+            font-size: 16px;
+        }
+
+        .btn-view-all {
+            background: transparent;
+            color: #944a00;
+            padding: 13px 25px;
+            border: 1px solid #897365;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-view-all:hover {
+            background: #944a00;
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            height: 600px;
+            margin-bottom: 0;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        /* ===== REVIEWS SECTION ===== */
+        .reviews-bg {
+            background: #f6f3f2;
+            padding: 80px 40px;
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 64px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 48px 0;
+        }
+
+        .review-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(51, 51, 51, 0.04);
+            transition: transform 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .star {
+            color: #ffc107;
+        }
+
+        .review-text {
+            font-size: 16px;
+            color: #564337;
+            font-style: italic;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #dcc1b1;
+            margin-top: 12px;
+        }
+
+        .author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #944a00;
+            font-size: 16px;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: #1b1c1c;
+            font-size: 14px;
+        }
+
+        .reviews-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 48px;
+        }
+
+        .btn-reviews {
+            padding: 13px 49px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+        }
+
+        .btn-read-reviews {
+            background: white;
+            color: #944a00;
+            border: 1px solid #897365;
+        }
+
+        .btn-leave-review {
+            background: #944a00;
+            color: white;
+        }
+
+        .btn-reviews:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            padding: 80px 64px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #944a00;
+            text-align: center;
+            margin-bottom: 48px;
+            line-height: 1.3;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #dcc1b1;
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #944a00;
+        }
+
+        .faq-question h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1b1c1c;
+            letter-spacing: 0.7px;
+        }
+
+        .faq-toggle {
+            width: 12px;
+            height: 7px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 16px;
+            font-size: 16px;
+            color: #564337;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== CONTACT FORM SECTION ===== */
+        .form-section {
+            background: #f9f7f6;
+            padding: 80px 40px;
+            margin-top: 40px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.08);
+        }
+
+        .form-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #944a00;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .form-container p {
+            text-align: center;
+            color: #564337;
+            margin-bottom: 32px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: #1b1c1c;
+            margin-bottom: 8px;
+            letter-spacing: 0.35px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #dcc1b1;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #944a00;
+            box-shadow: 0 0 0 3px rgba(148, 74, 0, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: #944a00;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.7px;
+            margin-top: 16px;
+        }
+
+        .btn-submit:hover:not(:disabled) {
+            background: #7a3a00;
+            transform: translateY(-2px);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #e4e2e1;
+            border-top: 1px solid #dcc1b1;
+            padding: 81px 40px 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 64px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #944a00;
+            margin-bottom: 24px;
+        }
+
+        .footer-col p {
+            font-size: 12px;
+            color: #564337;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: #944a00;
+            margin-bottom: 11px;
+            letter-spacing: 0.7px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 12px;
+            color: #564337;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: #944a00;
+        }
+
+        .footer-tagline {
+            font-size: 12px;
+            color: #1b1c1c;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #564337;
+            padding-top: 12px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 24px;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 500px;
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .booking-cta {
+                padding: 60px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .gallery-item {
+                height: 250px;
+            }
+
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .form-container {
+                padding: 32px 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 18px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .rooms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-buttons {
+                flex-direction: column;
+            }
+
+            .btn-call,
+            .btn-whatsapp {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Sai Murugan Lodge</a>
+            <nav class="nav">
+                <a href="#hero">Home</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Location</a>
+            </nav>
+            <button class="btn-book" onclick="document.querySelector('#contact-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="hero">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>A Simple, Comfortable Stay in Tiruvannamalai</h1>
+                <p>Experience peace and convenience with our 12 thoughtfully designed AC and Non-AC rooms, perfect for pilgrims and travelers seeking a reliable retreat.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.querySelector('#rooms').scrollIntoView({behavior: 'smooth'})">Book Your Stay</button>
+                    <button class="btn-secondary" onclick="document.querySelector('#rooms').scrollIntoView({behavior: 'smooth'})">View Rooms</button>
+                </div>
+                <div class="hero-badge">
+                    <svg class="badge-icon" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 4.5L4 7.5L12 1" stroke="#e4e2e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>12 Rooms • AC & Non-AC • Tiruvannamalai</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROOMS SECTION -->
+        <section class="section" id="rooms">
+            <div class="section-heading">
+                <h2>Choose the Room That Suits You</h2>
+                <p>Designed for comfort after a long day of spiritual journey.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- AC ROOM CARD -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('https://www.figma.com/api/mcp/asset/734c680e-c7a2-4995-aec3-e1ae9cb9a398.png');">
+                        <span class="room-badge">AC Room</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Comfortable • Cool • Convenient</h3>
+                        <p>Ideal for families and pilgrims seeking a cool retreat from the Tiruvannamalai heat. Features modern amenities and premium comfort.</p>
+                        <button class="btn-enquire">Enquire About AC Rooms ➜</button>
+                    </div>
+                </div>
+
+                <!-- NON-AC ROOM CARD -->
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url('https://www.figma.com/api/mcp/asset/c6a7a15e-94c6-4684-8cae-0cf41b5b85ac.png');">
+                        <span class="room-badge">Non-AC Room</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Simple • Comfortable • Budget-Friendly</h3>
+                        <p>Perfect for solo travellers or minimalist pilgrims. Clean, well-ventilated spaces offering essential comfort at an accessible rate.</p>
+                        <button class="btn-enquire">Enquire About Non-AC Rooms ➜</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="rooms-summary">12 Rooms. One Comfortable Stay.</div>
+            </div>
+        </section>
+
+        <!-- BOOKING CTA SECTION -->
+        <section class="booking-cta">
+            <h2>Planning a Stay in Tiruvannamalai?</h2>
+            <p>Contact us directly to check availability and secure your room. We are here to assist you with your pilgrimage stay.</p>
+            <div class="booking-buttons">
+                <button class="btn-call" onclick="window.location.href='tel:9363898676'">
+                    <span>📞</span> Call Now
+                </button>
+                <button class="btn-whatsapp" onclick="window.location.href='https://wa.me/919363898676'">
+                    <span>💬</span> WhatsApp Us
+                </button>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="section" id="gallery">
+            <div class="gallery-header">
+                <div>
+                    <h2>Take a Look Around</h2>
+                    <p>Explore the serene ambiance of Sai Murugan Lodge.</p>
+                </div>
+                <button class="btn-view-all">View All Photos</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://www.figma.com/api/mcp/asset/4f7c0236-d667-4d75-b230-0cbd901d0766.png');"></div>
+                <div class="gallery-item" style="background-image: url('https://www.figma.com/api/mcp/asset/734c680e-c7a2-4995-aec3-e1ae9cb9a398.png');"></div>
+                <div class="gallery-item" style="background-image: url('https://www.figma.com/api/mcp/asset/c6a7a15e-94c6-4684-8cae-0cf41b5b85ac.png');"></div>
+                <div class="gallery-item" style="background-image: url('https://www.figma.com/api/mcp/asset/92e0f80f-6375-431d-ae2f-5cc30dd31514.png');"></div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section class="reviews-bg" id="reviews">
+            <div class="reviews-container">
+                <div class="section-heading">
+                    <h2>What Our Guests Say</h2>
+                    <p>Genuine experiences from travelers and pilgrims.</p>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- REVIEW 1 -->
+                    <div class="review-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">"Very clean and peaceful stay. The AC room was very comfortable after a long day at the temple. Highly recommend for families."</p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: rgba(148, 74, 0, 0.2); color: #944a00;">R</div>
+                            <span class="author-name">Ramesh K.</span>
+                        </div>
+                    </div>
+
+                    <!-- REVIEW 2 -->
+                    <div class="review-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">"Simple, no-fuss accommodation. The Non-AC room was surprisingly cool and very budget-friendly for my solo trip."</p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: rgba(119, 90, 25, 0.2); color: #775a19;">S</div>
+                            <span class="author-name">Sanya M.</span>
+                        </div>
+                    </div>
+
+                    <!-- REVIEW 3 -->
+                    <div class="review-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">"Excellent location and very helpful staff. Felt very safe and welcoming. Will definitely stay here again during next Girivalam."</p>
+                        <div class="review-author">
+                            <div class="author-avatar" style="background: rgba(99, 94, 83, 0.2); color: #635e53;">V</div>
+                            <span class="author-name">Vijay T.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-buttons">
+                    <button class="btn-reviews btn-read-reviews" onclick="alert('Opening Google Reviews...')">Read Google Reviews</button>
+                    <button class="btn-reviews btn-leave-review" onclick="alert('Opening review form...')">Leave a Review</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>Do you have AC and Non-AC rooms?</h3>
+                    <svg class="faq-toggle" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="#1b1c1c" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Yes, we offer both AC and Non-AC rooms to cater to different preferences and budgets. Our AC rooms are equipped with modern amenities for maximum comfort, while our Non-AC rooms provide a simpler, more budget-friendly option without compromising on cleanliness and essential facilities.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>How many rooms are available?</h3>
+                    <svg class="faq-toggle" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="#1b1c1c" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    We have a total of 12 thoughtfully designed rooms, with a mix of AC and Non-AC options. This allows us to serve both families and individual travelers with varying comfort requirements and budgets.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>How can I check room availability?</h3>
+                    <svg class="faq-toggle" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="#1b1c1c" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    You can check availability by contacting us directly via phone (click "Call Now") or WhatsApp (click "WhatsApp Us"). Fill out our contact form, and our team will get back to you with current availability and pricing information.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>Do I need to book in advance?</h3>
+                    <svg class="faq-toggle" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="#1b1c1c" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    We recommend booking in advance, especially during peak pilgrimage seasons or festivals. However, we also accommodate walk-in guests based on availability. For guaranteed rooms, please book at least a few days ahead.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>Is the lodge suitable for families?</h3>
+                    <svg class="faq-toggle" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="#1b1c1c" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! Our AC rooms are particularly well-suited for families, offering comfortable accommodations with modern amenities. We provide a safe, welcoming environment for families on pilgrimage trips or tourism visits to Tiruvannamalai.
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section class="form-section" id="contact">
+            <div class="form-container">
+                <h2>Get in Touch</h2>
+                <p>Fill out the form below and we'll get back to you shortly with availability and pricing information.</p>
+                <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Your 10-digit number">
+                    </div>
+                    <button type="submit" class="btn-submit" id="submit-btn">Send Enquiry</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Sai Murugan Lodge</h3>
+                <p class="footer-tagline">All spiritual paths lead home.</p>
+                <p>Tiruvannamalai, Tamil Nadu</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Refunds</a>
+                <a href="#">Contact Support</a>
+            </div>
+            <div class="footer-col">
+            </div>
+            <div class="footer-col">
+                <p class="footer-copyright">© 2026 Sai Murugan Lodge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const APPSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHdc4yslK5A0g3qsZI0eU0fhRN5JMgR1R1L_7d8dcPKTPvzRdmc92gsz7qJTejmHJOpA/exec';
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const submitBtn = document.getElementById('submit-btn');
+            const formMessage = document.getElementById('form-message');
+
+            // Validate inputs
+            if (!name || !email || !phone) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            // Build URL with query parameters
+            const url = APPSCRIPT_URL + '?' + new URLSearchParams({
+                name: name,
+                email: email,
+                phone: phone
+            });
+
+            // Send using fetch with GET and no-cors mode
+            fetch(url, {
+                method: 'GET',
+                mode: 'no-cors'
+            })
+            .then(() => {
+                showSuccess();
+                document.getElementById('contact-form').reset();
+            })
+            .catch(() => {
+                showError('Failed to send. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Enquiry';
+            });
+
+            // Timeout to restore button (in case of slow response)
+            setTimeout(() => {
+                if (submitBtn.disabled) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Enquiry';
+                }
+            }, 5000);
+        }
+
+        function showSuccess() {
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submit-btn');
+
+            formMessage.textContent = '✓ Thank you! We\'ve received your enquiry. Our team will contact you shortly.';
+            formMessage.className = 'form-message success';
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Enquiry';
+
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                formMessage.className = 'form-message';
+                formMessage.textContent = '';
+            }, 5000);
+        }
+
+        function showError(message) {
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submit-btn');
+
+            formMessage.textContent = '✗ ' + message;
+            formMessage.className = 'form-message error';
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Enquiry';
+
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                formMessage.className = 'form-message';
+                formMessage.textContent = '';
+            }, 5000);
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
